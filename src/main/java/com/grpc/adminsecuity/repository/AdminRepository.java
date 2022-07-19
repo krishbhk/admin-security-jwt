@@ -1,8 +1,8 @@
 package com.grpc.adminsecuity.repository;
 
-import com.grpc.adminsecuity.model.AdminDao;
+import com.grpc.adminsecuity.model.Admin;
 import org.springframework.data.jpa.repository.JpaRepository;
 
-public interface AdminRepository extends JpaRepository<AdminDao, Integer> {
-    AdminDao findByAdminname(String adminnname);
+public interface AdminRepository extends JpaRepository<Admin, Integer> {
+    Admin findByAdminname(String adminnname);
 }

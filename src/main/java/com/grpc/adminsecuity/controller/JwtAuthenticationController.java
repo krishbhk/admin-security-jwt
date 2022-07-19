@@ -1,7 +1,7 @@
 package com.grpc.adminsecuity.controller;
 
 import com.grpc.adminsecuity.config.JwtTokenUtil;
-import com.grpc.adminsecuity.model.AdminDto;
+import com.grpc.adminsecuity.model.Admin;
 import com.grpc.adminsecuity.model.JwtRequest;
 import com.grpc.adminsecuity.model.JwtResponse;
 import com.grpc.adminsecuity.service.JwtAdminDetailsService;
@@ -42,7 +42,7 @@ public class JwtAuthenticationController {
     }
 
     @PostMapping("/register")
-    public ResponseEntity<?> saveUser(@RequestBody AdminDto admin) throws Exception {
+    public ResponseEntity<?> saveUser(@RequestBody Admin admin) throws Exception {
         return ResponseEntity.ok(jwtAdminDetailsService.save(admin));
     }
 

@@ -1,8 +1,19 @@
 package com.grpc.adminsecuity.model;
 
-public class AdminDto {
+import com.fasterxml.jackson.annotation.JsonIgnore;
 
+import javax.persistence.*;
+
+@Entity
+@Table(name="admin")
+public class Admin {
+    @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
+    private int id;
+    @Column
     private String adminname;
+    @Column
+    @JsonIgnore
     private String password;
 
     public String getAdminname() {
